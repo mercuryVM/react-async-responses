@@ -43,10 +43,12 @@ class Handler{
 function RegisterEvent(name, func, context){
     if(events.has(name)){
         events.get(name).AddResponse(context, func);
+        return false;
     }else{
         const e = new Event(name);
         e.AddResponse(context, func);
         events.set(name, e);
+        return true;
     }
 }
 

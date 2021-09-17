@@ -8,5 +8,8 @@
     "url": "https://github.com/mercuryVM/react-async-responses"
   },
   "author": "mercuryVM",
-  "license": "GPL-3.0-or-later"
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "react": "^17.0.2"
+  }
 }

@@ -13,6 +13,10 @@ class Component extends React.Component {
         this.state = { data: false }
     }
 
+    componentWillUnmount(){
+        RemoveEvent("dataFetched", this);
+    }
+
     render(){
         const { data } = this.state;
 

@@ -1,4 +1,4 @@
-# react-async-responses
+# React-Async-Responses
 
 This code will handle and link all asynchronous or unexpected data from backend to your React Components.
 
@@ -15,6 +15,8 @@ This code will handle and link all asynchronous or unexpected data from backend 
 
 api.js
 
+    import { CallEvent } from 'react-async-responses';
+    
     function GetResponseFromServer(){
 		return {
 			code: 200,
@@ -36,6 +38,7 @@ component.js
     
     import React from 'react';
     import { FetchDataAsync } from './api.js';
+    import { RegisterEvent, RemoveEvent } from 'react-async-responses'
     
     class Component extends React.Component {
 		constructor(props){
@@ -48,7 +51,7 @@ component.js
 			}, this);
 			this.state = { data: false }
 		}
-		
+
 		componentWillUnmount(){
 			RemoveEvent("dataFetched", this);
 		}

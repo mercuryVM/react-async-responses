@@ -1,5 +1,6 @@
 import React from 'react';
 import { FetchDataAsync } from './api.js';
+import {RegisterEvent, RemoveEvent} from 'react-async-responses'
 
 class Component extends React.Component {
     constructor(props){
@@ -30,3 +31,5 @@ class Component extends React.Component {
         )
     }
 }
+
+export default Component;

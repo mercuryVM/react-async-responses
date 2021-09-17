@@ -1,3 +1,5 @@
+import {CallEvent} from 'react-async-responses'
+
 function GetResponseFromServer(){
 	return {
 		code: 200,

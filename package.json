@@ -1,5 +1,5 @@
 {
-  "name": "react-async-responses",
+  "name": "react-asynchronous-responses",
   "version": "1.0.0",
   "description": "This code will handle and link all asynchronous data from backend to your React Components.",
   "main": "index.js",
@@ -8,9 +8,5 @@
     "url": "https://github.com/mercuryVM/react-async-responses"
   },
   "author": "mercuryVM",
-  "license": "GPL-3.0-or-later",
-  "dependencies": {
-    "react": "^17.0.2",
-    "react-async-responses": "^1.0.0"
-  }
+  "license": "GPL-3.0-or-later"
 }

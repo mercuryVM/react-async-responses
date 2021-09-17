@@ -1,6 +1,6 @@
 import React from 'react';
 import { FetchDataAsync } from './api.js';
-import { RegisterEvent, RemoveEvent } from 'react-async-responses'
+import { RegisterEvent, RemoveEvent } from 'react-async-response'
 
 class Component extends React.Component {
 	constructor(props){

@@ -4,7 +4,7 @@ This code will handle and link all asynchronous or unexpected data from backend 
 
 # Install
 
-    npm i react-asynchronous-responses
+    npm i react-async-response
 
 
 # Functions

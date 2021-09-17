@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mercuryVM/react-async-responses"
+    "url": "https://github.com/mercuryVM/react-asynchronous-responses"
   },
   "author": "mercuryVM",
   "license": "GPL-3.0-or-later"

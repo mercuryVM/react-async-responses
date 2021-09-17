@@ -19,7 +19,7 @@ This code will handle and link all asynchronous or unexpected data from backend 
 
 api.js
 
-    import { CallEvent } from 'react-async-responses';
+    import { CallEvent } from 'react-async-response';
     
     function GetResponseFromServer(){
 		return {
@@ -42,7 +42,7 @@ component.js
     
     import React from 'react';
     import { FetchDataAsync } from './api.js';
-    import { RegisterEvent, RemoveEvent } from 'react-async-responses'
+    import { RegisterEvent, RemoveEvent } from 'react-async-response'
     
     class Component extends React.Component {
 		constructor(props){

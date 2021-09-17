@@ -1,6 +1,6 @@
 {
   "name": "react-async-response",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "This code will handle and link all asynchronous data from backend to your React Components.",
   "main": "index.js",
   "repository": {

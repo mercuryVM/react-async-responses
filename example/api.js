@@ -1,4 +1,4 @@
-import {CallEvent} from 'react-async-responses'
+import { CallEvent } from 'react-async-responses';
 
 function GetResponseFromServer(){
 	return {

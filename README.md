@@ -15,59 +15,57 @@ This code will handle and link all asynchronous or unexpected data from backend 
 
 api.js
 
-import {CallEvent} from 'react-async-responses'
-
-function GetResponseFromServer(){
-	return {
-		code: 200,
-		status: "IT IS WORKS!"
+    import { CallEvent } from 'react-async-responses';
+    
+    function GetResponseFromServer(){
+		return {
+			code: 200,
+			status: "IT IS WORKS!"
+		}
 	}
-}
 
-function FetchDataAsync(){
-	const data = GetResponseFromServer();
-	CallEvent("dataFetched", data);
-}
+	function FetchDataAsync(){
+		const data = GetResponseFromServer();
+		CallEvent("dataFetched", data);
+	}
 
-export {
-	FetchDataAsync
-}
+	export {
+		FetchDataAsync
+	}
 
 component.js
 
     
-import React from 'react';
-import { FetchDataAsync } from './api.js';
-import {RegisterEvent, RemoveEvent} from 'react-async-responses'
+    import React from 'react';
+    import { FetchDataAsync } from './api.js';
+    import { RegisterEvent, RemoveEvent } from 'react-async-responses'
+    
+    class Component extends React.Component {
+		constructor(props){
+			super(props);
+			RegisterEvent("dataFetched", (context, args) => {
+				console.log(args[0]);
+				this.setState({
+					data: args[0]
+				})
+			}, this);
+			this.state = { data: false }
+		}
 
-class Component extends React.Component {
-    constructor(props){
-        super(props);
-        RegisterEvent("dataFetched", (context, args) => {
-            console.log(args[0]);
-            this.setState({
-                data: args[0]
-            })
-        }, this);
-        this.state = { data: false }
-    }
+		componentWillUnmount(){
+			RemoveEvent("dataFetched", this);
+		}
 
-    componentWillUnmount(){
-        RemoveEvent("dataFetched", this);
-    }
-
-    render(){
-        const { data } = this.state;
-
-        if(!data) {
-            FetchDataAsync();
-            return (null);
-        }
-
-        return (
-            <span>{data}</span>
-        )
-    }
-}
-
-export default Component;
+		render(){
+			const { data } = this.state;
+	
+			if(!data) {
+				FetchDataAsync();
+				return (null);
+			}
+	
+			return (
+				<span>{data}</span>
+			)
+		}
+	}

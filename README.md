@@ -1,4 +1,4 @@
-# React-Async-Responses
+# react-async-responses
 
 This code will handle and link all asynchronous or unexpected data from backend to your React Components.
 
